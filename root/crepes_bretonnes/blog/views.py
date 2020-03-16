@@ -1,6 +1,20 @@
 from django.http import HttpResponse, Http404
-from django.shortcuts import render
 from django.shortcuts import redirect
+from django.shortcuts import render
+from datetime import datetime
+
+def date_actuelle(request):
+    return render(request, 'blog/date.html', {'date': datetime.now()})
+
+
+def addition(request, nombre1, nombre2):    
+    total = nombre1 + nombre2
+
+    # Retourne nombre1, nombre2 et la somme des deux au tpl
+    return render(request, 'blog/addition.html', locals())
+	
+def accueil(request):
+	return render(request,'blog/accueil')
 
 def list_articles(request, month, year):
     """ Liste des articles d'un mois précis. """
