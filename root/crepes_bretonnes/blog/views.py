@@ -14,7 +14,7 @@ def addition(request, nombre1, nombre2):
     return render(request, 'blog/addition.html', locals())
 	
 def accueil(request):
-	return render(request,'blog/accueil')
+	return render(request,'blog/accueil.html')
 
 def list_articles(request, month, year):
     """ Liste des articles d'un mois précis. """
