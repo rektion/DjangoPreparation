@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\blog",
+    "\\blog\\management",
+    "\\blog\\management\\commands",
+    "\\blog\\management\\commands\\__pycache__",
+    "\\blog\\migrations",
+    "\\blog\\migrations\\__pycache__",
+    "\\blog\\templates",
+    "\\blog\\templates\\blog",
+    "\\crepes_bretonnes",
+    "\\crepes_bretonnes\\__pycache__",
+    "\\templates"
+  ],
+  "PreviewInSolutionExplorer": false
+}
