@@ -1,7 +1,13 @@
-from django.urls import path
-from blog import views
+"""crepes_bretonnes URL Configuration
+
+[...]
+"""
+from django.contrib import admin
+from django.urls import path, include
+
 
 urlpatterns = [
-    path('', views.accueil, name='accueil'),
-    path('article/<int:id>', views.lire, name='lire')
+    path('admin/', admin.site.urls),
+    # l'include vers blog/urls.py que l'on a mis dans les chapitres précédents
+    path('blog/', include('blog.urls')),  
 ]
