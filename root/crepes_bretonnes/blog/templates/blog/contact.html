@@ -1,7 +1,13 @@
-{% if envoi %}Votre message a bien été envoyé !{% endif %}
+<h1>Ajouter un nouveau contact</h1>
 
-<form action="{% url "contact" %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-</form>
+{% if sauvegarde %}
+    <p>Ce contact a bien été enregistré.</p>
+{% endif %}
+   
+<p>
+    <form method="post" enctype="multipart/form-data" action=".">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit"/>
+    </form>
+</p>

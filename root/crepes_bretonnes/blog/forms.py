@@ -5,6 +5,11 @@ class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
         exclude = ('auteur','categorie','slug')  # Exclura les champs nommés « auteur », « categorie » et « slug »
+		
+class NouveauContactForm(forms.Form):
+    nom = forms.CharField()
+    adresse = forms.CharField(widget=forms.Textarea)
+    photo = forms.ImageField()
 
 class ContactForm(forms.Form):
     sujet = forms.CharField(max_length=100)
