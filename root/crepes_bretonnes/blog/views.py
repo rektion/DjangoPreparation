@@ -1,9 +1,9 @@
 from django.http import Http404
-from django.shortcuts import render
 from blog.models import Article
 from django.shortcuts import render, get_object_or_404
 from .forms import ArticleForm
 from .forms import NouveauContactForm
+from .models import Contact as C
 
 def contact(request):
     # Construire le formulaire, soit avec les données postées,
@@ -22,7 +22,7 @@ def contact(request):
 
 def accueil(request):
     """ Afficher tous les articles de notre blog """
-    return render(request, 'templates/blog/accueil.html')
+    return render(request, 'blog/accueil.html')
 
 
 def nouveau_contact(request):
@@ -36,7 +36,14 @@ def nouveau_contact(request):
         contact.save()
         sauvegarde = True
 
-    return render(request, 'templates/blog/contact.html', {
+    return render(request, 'blog/contact.html', {
         'form': form, 
         'sauvegarde': sauvegarde
     })
+
+def voir_contacts(request):
+    return render(
+        request, 
+        'blog/voir_contacts.html', 
+        {'contacts': C.objects.all()}
+    )
