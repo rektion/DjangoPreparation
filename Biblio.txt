@@ -3,3 +3,9 @@ https://en.wikipedia.org/wiki/Audit_trail  Une introduction du milieu, j'ai pu c
 https://hackernoon.com/learn-blockchains-by-building-one-117428612f46  Est un guide pour construire une blockchain en python, j'attend de finir mon projet django pour voir si le framework propose quelque chose.
 
 https://hackernoon.com/databases-and-blockchains-the-difference-is-in-their-purpose-and-design-56ba6335778b De la théorie sur la blockchain, qui vient en complément de la pratique du lien précédent
+
+https://en.wikipedia.org/wiki/Clinical_trial_management_system
+Audit trail en biotech/pharmaceutique
+
+https://code.djangoproject.com/wiki/AuditTrail
+Audit trail en django
